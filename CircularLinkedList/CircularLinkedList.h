@@ -39,7 +39,7 @@ inline CircularLinkedList<T>::~CircularLinkedList()
 	{
 		while (this->Head)
 		{
-		   this->RemoveFromFront()<<" ";
+		   this->RemoveFromFront();
 		}
 	}
 }
@@ -49,7 +49,7 @@ inline void CircularLinkedList<T>::insetAtFront(T data)
 {
 	Node<T>* NewNode = new Node<T>(data);
 	NewNode->Next = this->Head;
-	if (this->Head == nullptr)
+	if (this->Head ==nullptr)
 	{
 		this->Tail = NewNode;
 	}
@@ -155,14 +155,9 @@ inline int CircularLinkedList<T>::size()
 	{
 		int size = 0;
 		Node<T>* Mover = this->Head;
-		while (Mover!=nullptr)
+		while (Mover!=this->tail)
 		{
 			size++;
-			if (Mover==this->Tail)
-			{
-				break;
-			}
-
 			Mover = Mover->Next;
 		}
 		return size;

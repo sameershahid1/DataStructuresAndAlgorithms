@@ -1,5 +1,16 @@
 #pragma once
 #include"DoubleLinkedList.h"
+#include<iostream>
+using namespace std;
+
+
+template<class T>
+class DoubleLinkedList;
+
+template<class T>
+class Node;
+
+
 template<class T>
 class Node
 {

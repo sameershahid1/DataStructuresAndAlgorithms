@@ -1,4 +1,6 @@
+#include "stdafx.h"
 #include "Node.h"
+
 
 Node::Node(string data)
 {
@@ -6,6 +8,7 @@ Node::Node(string data)
 	this->Left = nullptr;
 	this->Right = nullptr;
 }
+
 
 Node::~Node()
 {
